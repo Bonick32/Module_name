@@ -15,7 +15,6 @@ MAX_BUNCHE_SIZE = 20
 _holder = {}
 _sorted_keys = None
 
-
 def put_stones():
     """ расположить камни на игровой поверхности """
     global _holder, _sorted_keys
