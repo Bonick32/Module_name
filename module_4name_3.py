@@ -36,11 +36,11 @@ class House:
         return self.number_of_floors != other.number_of_floors
 
     def __add__(self, value):
-        self.number_of_floors = self.number_of_floors + value
-        return self
-
+        self.number_of_floors += value     # изначально записал для __add__ и __radd__ так:
+        return self                        # self.number_of_floors = self.number_of_floors + value
+                                           # но потом проверил, что работает и так тоже, по крайней мере для этой ситуации
     def __radd__(self, value):
-        self.number_of_floors = self.number_of_floors + value
+        self.number_of_floors += value
         return self
 
     def __iadd__(self, value):
